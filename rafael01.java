@@ -5,7 +5,7 @@ public class rafael01{
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         double [][] matriz = new double[2][2];
-        double [][] matrizResult = new double[2][2];
+        double [][] matrizResult = new double[matriz.length][matriz[0].length];
         double maiorNum, resultado;
 
         maiorNum = 0;
