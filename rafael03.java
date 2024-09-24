@@ -10,6 +10,16 @@ public class rafael03 {
         int linhas, colunas;
 
         System.out.println("3. Progarama que calcula a o resultado da multipliação de duas matrizes");
+
+        System.out.println("Matriz A:");
+
+        for (int i = 0 ; i < A.length; i++){
+            for (int j = 0 ; j < A[i].length; j++){
+                System.out.print("Digite o valor da linha "+(i+1)+" coluna "+(j+1)+": ");
+                A [i][j] = teclado.nextDouble();
+            }
+        }
+
         System.out.print("Digite a quantidade de linhas da matriz B: ");
         linhas = teclado.nextInt();
         System.out.print("Digite a quantidade de colunas da matriz B: ");
@@ -20,6 +30,16 @@ public class rafael03 {
             linhas = teclado.nextInt();
         }
 
+        double [] [] B = new double [linhas][colunas];
+
+        for (int i = 0 ; i <B.length; i++){
+            for (int j = 0 ; j <B[i].length; j++){
+                System.out.print("Digite o valor da linha "+(i+1)+" coluna "+(j+1)+": ");
+                B [i][j] = teclado.nextDouble();
+            }
+        }
+
+        
 
         teclado.close();
     }

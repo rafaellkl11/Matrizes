@@ -1,4 +1,5 @@
-/**/
+/*2. Faça um programa que preencha uma matriz 3 x 5 com números reais. Some os valores de cada linha e
+armazene em um vetor. A seguir, mostre qual a linha que tem maior valor somado.*/
 
 import java.util.*;
 public class rafael02 {
