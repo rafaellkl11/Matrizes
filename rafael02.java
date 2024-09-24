@@ -1,6 +1,5 @@
 /**/
 
-import java.net.SocketTimeoutException;
 import java.util.*;
 public class rafael02 {
     public static void main(String[] args) {
