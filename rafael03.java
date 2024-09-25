@@ -9,7 +9,7 @@ public class rafael03 {
         double [][] A = new double[3][4];
         int linhas, colunas;
 
-        System.out.println("3. Progarama que calcula a o resultado da multipliação de duas matrizes");
+        System.out.println("3. Progarama que calcula a o resultado da multipliação de duas matrizes A x B");
 
         System.out.println("Matriz A:");
 
@@ -39,7 +39,26 @@ public class rafael03 {
             }
         }
 
-        
+        double [][] AxB = new double [A.length][B[0].length];
+
+        for (int i = 0 ; i < AxB.length ; i++){
+            for (int j = 0 ; j < AxB[i].length; j++){
+                for (int k  = 0 ; k < A[0].length ; k++){
+                    AxB [i][j] = AxB[i][j] + A[i][k] * B[k][j];
+                }
+            }
+        }
+
+        System.out.println("Resultado: ");
+        System.out.println("AxB: ");
+
+        for (int i = 0 ; i < AxB.length ; i++){
+            System.out.print(" | ");
+            for ( int j = 0 ; j < AxB[i].length ; j++){
+                System.out.print(AxB[i][j]+" | ");
+            }
+            System.out.print("\n");
+        }        
 
         teclado.close();
     }
