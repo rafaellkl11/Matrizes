@@ -5,12 +5,14 @@ import java.util.*;
 public class rafael04 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner (System.in);
-        int semana, dias;
-        double soma, media;
+        int semana, dias, diasAcimaMed;
+        double soma, media, minProddia;
 
         soma = 0;
         dias = 0;
         media = 0;
+        diasAcimaMed = 0;
+        minProddia = 0;
 
         System.out.println("4. Programa que armazena a produção de uma fabrica de semana a asemana");
 
@@ -18,6 +20,7 @@ public class rafael04 {
         semana = teclado.nextInt();
 
         double [][] matriz = new double [semana][7];
+        double [][] MinProd = new double [semana][2];
 
         for (int i = 0 ; i < matriz.length ; i++){
             for ( int j = 0; j < matriz[i].length ; j++){
@@ -38,10 +41,43 @@ public class rafael04 {
         dias = matriz.length * matriz[0].length;
         media  = soma / dias;
 
-        System.out.println(soma+", "+dias+", "+media);
+        for (int i = 0 ; i < matriz.length ; i++){
+            for (int j = 0 ; j < matriz[i].length ; j++){
+                if (matriz[i][j] > media){
+                    diasAcimaMed++;
+                }
+            }
+        }
 
+        for (int i = 0 ; i < MinProd.length ; i++){
+            for (int j = 0 ;j < MinProd[i].length ; j++){
+                if (j == 0){
+                    MinProd[i][j] = i+1;
+                }
+                else if (j == 1){
+                    minProddia = matriz [i][j];
+                    for (int k = 0 ; k < matriz[i].length; k++){
+                        if (minProddia > matriz[i][k]){
+                            minProddia = matriz[i][k];
+                            MinProd[i][j] = k+1;
+                        }
+                    }
+                }
+            }
+        }
 
-
+        System.out.println("Resultado: ");
+        System.out.println("Produção média: "+media);
+        System.out.println("Número de dias com produção acima da média: "+diasAcimaMed);
+        System.out.println("\nIndicação dos dias de mínima produção:");
+        System.out.println("Semana | Dia");
+        for (int i = 0 ; i < MinProd.length ; i++){
+            System.out.print(" | ");
+            for ( int j = 0 ; j < MinProd[i].length ; j++){
+                System.out.print(MinProd[i][j]+" | ");
+            }
+            System.out.print("\n");
+        }  
 
         teclado.close();
     }
