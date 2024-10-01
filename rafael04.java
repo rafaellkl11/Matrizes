@@ -59,7 +59,7 @@ public class rafael04 {
                     for (int k = 0 ; k < matriz[i].length; k++){
                         if (minProddia > matriz[i][k]){
                             minProddia = matriz[i][k];
-                            MinProd[i][j] = k+1;
+                            MinProd[i][j] = k + 1;
                         }
                     }
                 }
