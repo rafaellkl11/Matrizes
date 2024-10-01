@@ -11,7 +11,7 @@ import java.util.*;
 public class rafael05 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        String [] nomes = new String [4];
+        String [] nomes = new String [10];
         double [][] matriz = new double[nomes.length][5];
         double[] medias = new double[nomes.length];
         double soma, media;
