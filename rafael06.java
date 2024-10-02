@@ -9,12 +9,10 @@ seu gerente, mostrando ao mesmo a média e o desvio padrão de cada linha de pro
 exiba, se for o caso, qual das linhas de produção precisa ser revisada.*/
 
 import java.util.*;
-
-import javax.swing.text.AbstractDocument.LeafElement;
 public class rafael06 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        double [][] prod = new double[6][5];
+        double [][] prod = new double[6][20];
         double [] media = new double [prod.length];
         double [] variacaoVetor = new double [prod.length];
         double variacaoSoma, soma;
@@ -54,7 +52,7 @@ public class rafael06 {
                 System.out.println("lote "+(i+1)+ " está dentro dos padrões");
             }
             else{
-                System.out.println("lote " +(i+1)+ " está  fora dos padrões");
+                System.out.println("lote " +(i+1)+ " está fora dos padrões");
             }
         }
 
