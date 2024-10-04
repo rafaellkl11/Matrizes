@@ -55,7 +55,7 @@ public class rafael06 {
                 System.out.println("lote " +(i+1)+ " está fora dos padrões");
             }
         }
-
+teste
         teclado.close();    
     }
 }
