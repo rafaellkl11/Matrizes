@@ -15,7 +15,7 @@ public class rafael07 {
 
         for (int i = 0 ; i < matriz.length ; i++){
             for (int j = 0; j < matriz[i].length ; j++){
-                System.out.println("Digite o valor da linha "+(i+1)+" coluna "+(j+1)+" :");
+                System.out.print("Digite o valor da linha "+(i+1)+" coluna "+(j+1)+" :");
                 matriz[i][j] = teclado.nextDouble();
             }
         }
